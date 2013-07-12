@@ -20,7 +20,7 @@ fs.readFile('index.html', function (err, data) {
 return;
 */
 //app.get('/', function(request, response) {
-  response.send(fs.reafFileSync('index.html'));
+  response.send(fs.readFileSync('index.html'));
 });
 
 var port = process.env.PORT || 5000;
