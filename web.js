@@ -4,6 +4,7 @@ var app = express.createServer(express.logger());
 var buf;
 var fs = require('fs');
 app.get('/', function(request, response) {
+/*
 fs.readFile('index.html', function (err, data) {
   if (err) {
   response.writeHead(200, headers);
@@ -17,8 +18,9 @@ fs.readFile('index.html', function (err, data) {
    
 });
 return;
+*/
 //app.get('/', function(request, response) {
-  //response.send(JSON.stringify(buf));
+  response.send(fs.reafFileSync('index.html'));
 });
 
 var port = process.env.PORT || 5000;
