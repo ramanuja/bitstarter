@@ -7,7 +7,7 @@ app.get('/', function(request, response) {
 fs.readFile('index.html', function (err, data) {
   if (err) {
   response.writeHead(200, headers);
-  response.end(err);
+  response.end('We encountered an error');
   return;
   }  
  
