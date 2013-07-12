@@ -4,7 +4,7 @@ var app = express.createServer(express.logger());
 var buf;
 var fs = require('fs');
 app.get('/', function(request, response) {
-var headers = {'Content-type': text/html};
+var headers = {'Content-type': 'text/html'};
   fs.readFile('index.html', function (err, data) {
   if (err) {
       response.writeHead(200, headers);
@@ -18,7 +18,7 @@ var headers = {'Content-type': text/html};
    
 });
 return;
-*/
+
 //app.get('/', function(request, response) {
   //response.send(fs.readFileSync('index.html'));
 });
