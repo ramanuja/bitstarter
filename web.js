@@ -5,8 +5,13 @@ var buf;
 var fs = require('fs');
 app.get('/', function(request, response) {
 fs.readFile('index.html', function (err, data) {
-  if (err) throw err;
+  if (err) {
   response.writeHead(200, headers);
+  response.end(err);
+  return;
+  }  
+ 
+ response.writeHead(200, headers);
   response.end(data);
   console.log(data);
    
